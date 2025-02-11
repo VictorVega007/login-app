@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiHeaderConfiguration = axios.create({
-  baseURL: "https://api.example.com",
+  baseURL: "https://api.artic.edu/api/v1",
   headers: {
     "Content-Type": "application/json",
   },
@@ -9,8 +9,9 @@ const apiHeaderConfiguration = axios.create({
 
 apiHeaderConfiguration.interceptors.request.use(
   (config) => {
-    const token = sessionStorage.getItem("authToken");
+    const token = localStorage.getItem("");
     if (token) {
+      config.headers.Accept = "application/json";
       config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
