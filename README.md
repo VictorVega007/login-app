@@ -68,6 +68,7 @@ privados y públicos sin comprometer la mantenibilidad. 🚀
 
 La estructura del proyecto de forma visual tiene la siguiente estructura:
 
+```
 LOGIN-APP │── node_modules/ # Dependencias del proyecto (directorio agregado al
 gitignore) │── public/ # Archivos estáticos públicos │── src/ # Código fuente
 principal │ ├── assets/ # Recursos estáticos (imágenes, íconos, etc.) │ ├──
@@ -85,6 +86,7 @@ auth-hook/ │ │ ├── records-hook/ │ │ └── validation-regex-ho
 Componente principal │ └── App.css # Estilos globales │── package.json #
 Configuración de dependencias y scripts │── README.md # Documentación del
 proyecto
+```
 
 ## 🚪 Estrategia del Logout de la APP
 
