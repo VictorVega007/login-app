@@ -69,23 +69,44 @@ privados y públicos sin comprometer la mantenibilidad. 🚀
 La estructura del proyecto de forma visual tiene la siguiente estructura:
 
 ```
-LOGIN-APP │── node_modules/ # Dependencias del proyecto (directorio agregado al
-gitignore) │── public/ # Archivos estáticos públicos │── src/ # Código fuente
-principal │ ├── assets/ # Recursos estáticos (imágenes, íconos, etc.) │ ├──
-components/ # Componentes principales del proyecto │ │ ├──
-private-modules/dashboard/ │ │ │ └── dashboard.tsx │ │ ├── public-modules/login/
-│ │ │ ├── login.tsx │ │ │ └── login.css │ ├── shared/ # Componentes compartidos
-│ │ ├── floating-button/ │ │ ├── header/ │ │ ├── modal/ │ │ └── paginator/ │ ├──
-context/ # Context API para manejo de estado global │ │ └── auth-context/ │ │
-└── auth-context.tsx │ ├── core/ # Lógica central del proyecto │ │ ├── guard/ #
-Protecciones de rutas │ │ │ ├── redirect-guard.tsx │ │ │ └── router-guard.tsx │
-│ ├── model/ # Definiciones de modelos de datos │ │ ├── services/ # Servicios y
-llamadas a APIs │ ├── utils/ # Funciones y herramientas reutilizables │ │ ├──
-axios/ │ │ ├── functions/ │ │ └── token/ │ ├── hooks/ # Custom Hooks │ │ ├──
-auth-hook/ │ │ ├── records-hook/ │ │ └── validation-regex-hook/ │ ├── App.tsx #
-Componente principal │ └── App.css # Estilos globales │── package.json #
-Configuración de dependencias y scripts │── README.md # Documentación del
-proyecto
+LOGIN-APP
+│── node_modules/         # Dependencias del proyecto
+│── public/               # Archivos estáticos públicos
+│── src/                  # Código fuente principal
+│   ├── assets/           # Recursos estáticos (imágenes, íconos, etc.)
+│   │   └── react.svg
+│   ├── components/       # Componentes reutilizables
+│   │   ├── private-modules/dashboard/
+│   │   │   └── dashboard.tsx
+│   │   ├── public-modules/login/
+│   │   │   ├── login.tsx
+│   │   │   └── login.css
+│   ├── shared/           # Componentes compartidos
+│   │   ├── floating-button/
+│   │   ├── header/
+│   │   ├── modal/
+│   │   └── paginator/
+│   ├── context/          # Context API para manejo de estado global
+│   │   └── auth-context/
+│   │       └── auth-context.tsx
+│   ├── core/             # Lógica central del proyecto
+│   │   ├── guard/        # Protecciones de rutas
+│   │   │   ├── redirect-guard.tsx
+│   │   │   └── router-guard.tsx
+│   │   ├── model/        # Definiciones de modelos de datos
+│   │   ├── services/     # Servicios y llamadas a APIs
+│   ├── utils/            # Funciones y herramientas reutilizables
+│   │   ├── axios/
+│   │   ├── functions/
+│   │   └── token/
+│   ├── hooks/            # Custom Hooks
+│   │   ├── auth-hook/
+│   │   ├── records-hook/
+│   │   └── validation-regex-hook/
+│   ├── App.tsx           # Componente principal
+│   └── App.css           # Estilos globales
+│── package.json          # Configuración de dependencias y scripts
+│── README.md             # Documentación del proyecto
 ```
 
 ## 🚪 Estrategia del Logout de la APP
